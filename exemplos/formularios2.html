@@ -11,35 +11,58 @@
     <form>
     <table style="width:70%; margin: 0 auto">
         <tr>
-            <td style="text-align:right;">nome:</td>
+            <td style="text-align:right;">Nome:</td>
             <td>
-                <input type="dsada" name="nome"
+                <input type="text" name="nome"
                        placeholder="name">
             </td>
         </tr>
         <tr>
-            <td style="text-align:right;">e-mail:</td>
+            <td style="text-align:right;">E-mail:</td>
             <td>
                 <input type="email" name="email"
                        placeholder="seu e-mail">
             </td>
         </tr>
         <tr>
-            <td style="text-align:right;">salario:</td>
+            <td style="text-align:right;">Salário:</td>
             <td>
                 <input type="number" name="salario"
                        step="0.05" min="0" max="1000">
             </td>
         </tr>
         <tr>
-            <td style="text-align:right;">telefone:</td>
+            <td style="text-align:right;">Telefone:</td>
             <td>
                 <input type="telefone" name="telefone"
                        placeholder="telefone">
             </td>
         </tr>
         <tr>
-            <td colspan="4" style="text-align:center;"></td>
+            <td style="text-align:right;">Uf nascimento:</td>
+            <td>
+                <select name="uf">
+                    <option selected disabled>Selecione...</option>
+                    <option>São Paulo</option>
+                    <option>Santa Catarina</option>
+                    <option selected>Rondônia</option>
+                    <option>Paraná</option>
+                    <option>Rio Grande do Sul</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Hobby:</td>
+            <td>
+                <input type="radio" name="hobby" value="books" checked>books
+                &nbsp;&nbsp;
+                <input type="radio" name="hobby" value="games">games
+                &nbsp;&nbsp;
+                <input type="radio" name="hobby" value="music">music
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;"></td>
             <td>
                 <input type="submit" value="Enviar"> &nbsp;&nbsp;
                 <input type="reset" value="Limpar">

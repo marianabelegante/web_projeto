@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade sobre formulário</title>
+</head>
+<body>
+    <h2 style="text-align:center; width:90%;">Formulário de Inscrição em evento</h2>
+    <form>
+    <table style="width:90%; margin: 0 auto">
+        <tr>
+            <td style="text-align:right;">Nome completo:</td>
+            <td>
+                <input type="text" name="nome"
+                       placeholder="seu nome">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">E-mail:</td>
+            <td>
+                <input type="email" name="email"
+                       placeholder="seu e-mail">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Sexo:</td>
+            <td>
+                <input type="radio" name="sexo" value="masculino">Masculino
+                &nbsp;&nbsp;
+                <input type="radio" name="sexo" value="feminino">Feminino
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Cargo:</td>
+            <td>
+                <input type="text" name="cargo">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Nascimento:</td>
+            <td>
+                <input type="date" name="nascimento">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Telefone:</td>
+            <td>
+                <input type="telefone" name="telefone">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <h3 style="text-align:center; width:90%;">Informações da Instituição</h3>
+     <p style="text-align:center; width:90%;">Preencha os campos abaixo com as informações da empresa em que trabalha.</p>
+    <br>
+     <table style="width:90%; margin: 0 auto">
+        <tr>
+            <td style="text-align:right;">Empresa:</td>
+            <td>
+                <input type="text" name="empresa">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Endereço completo:</td>
+            <td>
+                <input type="text" name="endereço">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Cidade:</td>
+            <td>
+                <input type="text" name="cidade">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Estado:</td>
+            <td>
+                <select name="estado">
+                    <option>São Paulo</option>
+                    <option>Santa Catarina</option>
+                    <option selected>Rondônia</option>
+                    <option>Paraná</option>
+                    <option>Rio Grande do Sul</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Quant. Funcionários:</td>
+            <td>
+                <input type="number" name="quant. funcionarios">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Observações:</td>
+            <td>
+                <input type="text" name="observações">
+            </td>
+        </tr>
+     </table>
+     <fieldset style="text-align: center; width: 50%;">
+        <legend>Recibo:</legend>
+            <label for="recibo">Emitir em nome da instituição</label>
+            <input type="checkbox" id="recibo" name="recibo">
+            <br><br>
+            <input type="submit" value="Fazer Inscrição">
+        </fieldset>
+    </form>
+</body>
+</html>
