@@ -1,0 +1,36 @@
+.logo{ grid-area: logo;}
+.nav { grid-area: nav;}
+.header { grid-area: header;}
+.side{ grid-area: side;}
+.foot { grid-area: foot;}
+
+.container-grid{
+    display: grid;
+    grid-template-areas: 
+        'logo    logo'
+        'nav     nav'  
+        'header  header'
+        'side     body'
+        'foot    foot';
+    grid-gap: 0.8em;
+    background-color: rgb(10, 178, 208);
+    padding: 0.5em;
+    min-width: 100%;
+    min-height: 100%;
+    }
+
+.int {
+    background-color: rgb(134, 240, 248);
+    text-align: center ;
+    padding: 0.5em;
+}
+@media screen and (max-width: 470px ){
+    .container-grid{
+        grid-template-areas: 
+        'logo    logo'
+        'nav     nav'  
+        'header  header'
+        'side     body'
+        'foot    foot';
+    }
+}

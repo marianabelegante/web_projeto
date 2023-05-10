@@ -1,0 +1,39 @@
+.logo{ grid-area: logo;}
+.nav { grid-area: nav;}
+.header { grid-area: header;}
+.intro{ grid-area: intro;}
+.boxo { grid-area: boxo;}
+.boxt { grid-area: boxt;}
+.boxth { grid-area: boxth;}
+.foot { grid-area: foot;}
+
+.container-grid{
+    display: grid;
+    grid-template-areas: 
+        'logo    nav    nav'  
+        'header  header header'
+        'intro   intro  intro'
+        'boxo    boxt   boxth'
+        'foot    foot   foot';
+    grid-gap: 0.3em;
+    background-color: rgb(84, 81, 87);
+    padding: 0.8em;
+    min-width: 40%;
+    min-height: 60%;
+    }
+
+.int {
+    background-color: rgb(187, 187, 187);
+    text-align: center ;
+    padding: 0.3em;
+}
+@media screen and (max-width: 470px ){
+    .container-grid{
+        grid-template-areas: 
+        'logo    nav    nav'  
+        'header  header header'
+        'intro   intro  intro'
+        'boxo    boxt   boxth'
+        'foot    foot   foot';
+    }
+}
