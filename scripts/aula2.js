@@ -24,8 +24,9 @@ alert((n1+n2+n3+n4) / 4);
 var s = parseInt(prompt('Informe o seu saldo: '))
 
 alert((s * 2 / 100) + s);
-*/
+
 var t = parseInt(prompt('Informe a quantidade de segundos: '))
 var m = t / 60
 var s = t % 60
 alert(t + ' segundos equivale a ' + m + ' minutos e ' + s + ' segundos.' );
+*/
