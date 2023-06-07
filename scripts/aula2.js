@@ -30,3 +30,8 @@ var m = t / 60
 var s = t % 60
 alert(t + ' segundos equivale a ' + m + ' minutos e ' + s + ' segundos.' );
 */
+//QUESTÃO 3 DA AULA DO DIA 30/05
+var n = parseInt(prompt('Informe um número: '))
+a = n % 10
+b = n % 5
+c = n % 2
