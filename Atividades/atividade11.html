@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+</head>
+<body>
+    <h2>
+        Crie um questionário com 3 questões para o usuário responder. Todas as questões são obrigatórias.
+        Ao clicar no botão submit, verifique se todas as respostas estão corretas. Caso sim, submeta a página.
+        Caso contrário, apresente uma broda vermelha nos campos que possuírem respostas incorretas.
+    </h2>
+    <form id="form">
+        <fieldset>
+            <label>Qual o valor de 9 x 8?</label>
+            <input type="text" name="multi" id="resultado"><br><br>
+            <label>Valor de 4!:</label>
+            <input type="text" name="fatorial" id="resposta"><br><br>
+            <label>Qual o valor de 14 + 26?</label>
+            <input type="text" name="multi" id="retorno"><br><br>
+        </fieldset>
+        <button id="btenviar">Enviar</button>
+    </form>
+    <script>
+       form.onsubmit = function(){
+				m = document.getElementsById('nome')[0];
+				f = document.getElementsById('senha')[0];
+				s = document.getElementsById('sexo');
+	
+				nome.style.backgroundColor = 'lightRed';
+				senha.style.backgroundColor = 'lightRed';
+	
+				let ok = false;
+	
+				if (nome.value.length > 5) {
+					nome.style.backgroundColor = 'white';
+					ok = true;
+				}
+    </script>
+</body>
+</html>
