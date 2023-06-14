@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+    <div>
+        <p>
+        Criar uma aplicação que solicite, em uma caixa de texto, a quantidade de refresco que se deseja preparar. 
+        Em seguida escolher o tipo de suco marcando um dos botões de rádio. Pode-se também marcar através das caixas
+        de checagem(CheckBox) o tipo de complemento do refresco (pode-se marcar mais de uma opção).
+        Ao clicar no botão calcular, a quantidade de água e de suco necessárias, para preparação do refresco, deve ser
+        calculada e mostrada em spans ou caixas de texto não editáveis, seguindo os seguintes critérios:
+        maracujá : 6 partes de água e 4 partes de suco;
+        caju: 8 partes de água e 2 partes de suco;
+        goiaba: 5 partes de água e 5 partes de suco.
+        Caso seja marcado que se utilizará açucar reduzir a quantidade de água em 2%;
+        Caso seja marcado que se utilizará gelo reduzir a quantidade de água em 5%;
+        </p>
+        <br>
+        
+        <fieldset>
+            <label for="suco">Quantos litros de refresco deseja fazer?</label>
+            <input type="number" id="litro"><br>
+            <label for="sabor">Escolha o tipo de suco:</label><br>
+            <input type="radio" name="poupa" id="m" onclick="maracuja()">maracujá
+            <input type="radio" name="poupa" id="c" onclick="caju()">caju
+            <input type="radio" name="poupa" id="g" onclick="goiaba()">goiaba<br>
+            <label for="itens">Itens extras a utilizar:</label><br>
+            <input type="checkbox" name="acucar" id="sugar" onchange="acucar()">açucar
+            <input type="checkbox" name="gelo" id="ice" onchange="ice()">gelo<br>
+            <button id="c" onclick="btFuncao()">Calcular</button>
+            <button id="n">Novo</button>
+            
+        </fieldset>
+        <fieldset>
+            <span id="texto"></span>
+        </fieldset>
+
+    <script>
+        var l = document.getElementById("litro");
+        var s = document.getElementById("texto");
+
+        var agua = 0;
+        var poupa = 0;
+        function maracuja(){
+            agua = l.value * 0.6;
+            poupa = l.value * 0.4;
+        }
+
+        function caju(){
+            agua = l.value * 0.8;
+            poupa = l.value * 0.2;
+        }
+
+        function goiaba(){
+            agua = l.value * 0.5;
+            poupa = l.value * 0.5;
+        }
+
+        function acucar(){
+            if(acucar.checked){
+            agua -= agua.value / 100 * 2;
+            }
+        }
+/*
+        function ice(){
+            agua = agua.value - (agua.value / 100 * 5);
+        }
+*/
+        function btFuncao(){
+            s.innerHTML = "Para fazer o suco precisará de " + agua + " L de água e " + poupa + " L de poupa."
+        }
+        
+    </script>
+</body>
+</html>
