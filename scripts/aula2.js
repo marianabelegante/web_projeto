@@ -1,10 +1,10 @@
 
-// var n1 = parseInt(prompt('Informe o primeiro valor: '))
-// var n2 = parseInt(prompt('Informe o segundo valor: '))
+ var n1 = parseInt(prompt('Informe o primeiro valor: '))
+ var n2 = parseInt(prompt('Informe o segundo valor: '))
 
 // parseFloat() para converter para números reais...
 
-//alert(n1+n2);
+alert(n1+n2);
 /*
 result.innerHTML  = n1+n2;
 
@@ -29,9 +29,10 @@ var t = parseInt(prompt('Informe a quantidade de segundos: '))
 var m = t / 60
 var s = t % 60
 alert(t + ' segundos equivale a ' + m + ' minutos e ' + s + ' segundos.' );
-*/
+
 //QUESTÃO 3 DA AULA DO DIA 30/05
 var n = parseInt(prompt('Informe um número: '))
 a = n % 10
 b = n % 5
 c = n % 2
+*/

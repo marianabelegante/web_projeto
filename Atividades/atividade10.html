@@ -22,17 +22,17 @@
         <br>
         
         <fieldset>
-            <label for="suco">Quantos litros de refresco deseja fazer?</label>
-            <input type="number" id="litro"><br>
-            <label for="sabor">Escolha o tipo de suco:</label><br>
-            <input type="radio" name="poupa" id="m" onclick="maracuja()">maracujá
-            <input type="radio" name="poupa" id="c" onclick="caju()">caju
-            <input type="radio" name="poupa" id="g" onclick="goiaba()">goiaba<br>
-            <label for="itens">Itens extras a utilizar:</label><br>
-            <input type="checkbox" name="acucar" id="sugar" onchange="acucar()">açucar
-            <input type="checkbox" name="gelo" id="ice" onchange="ice()">gelo<br>
-            <button id="c" onclick="btFuncao()">Calcular</button>
-            <button id="n">Novo</button>
+            <label for="litro">Quantos litros de refresco deseja fazer?</label>
+			<input type="number" id="litro" required><br><br>
+			<label>Escolha o tipo de suco:</label><br>
+			<input type="radio" name="poupa" id="m">maracujá
+			<input type="radio" name="poupa" id="c">caju
+			<input type="radio" name="poupa" id="g">goiaba<br>
+			<label>Itens extras a utilizar:</label><br>
+			<input type="checkbox" name="complemento" id="sugar">açúcar
+			<input type="checkbox" name="complemento" id="ice">gelo<br>
+			<button id="c" onclick="btFuncao()">Calcular</button>
+			<input type="reset" value="Novo">
             
         </fieldset>
         <fieldset>
@@ -40,40 +40,45 @@
         </fieldset>
 
     <script>
-        var l = document.getElementById("litro");
-        var s = document.getElementById("texto");
+       function btFuncao() {
+				var l = document.getElementById("litro");
+				var s = document.getElementById("texto");
+				var sabor = document.querySelector('input[name="poupa"]:checked');
+				var complemento = document.querySelector('input[name="complemento"]:checked');
 
-        var agua = 0;
-        var poupa = 0;
-        function maracuja(){
-            agua = l.value * 0.6;
-            poupa = l.value * 0.4;
-        }
+				var agua = 0;
+				var poupa = 0;
 
-        function caju(){
-            agua = l.value * 0.8;
-            poupa = l.value * 0.2;
-        }
+				if (sabor) {
+					if (sabor.id === "m") {
+						agua = l.value * 0.6;
+						poupa = l.value * 0.4;
+					}
 
-        function goiaba(){
-            agua = l.value * 0.5;
-            poupa = l.value * 0.5;
-        }
+					if (sabor.id === "c") {
+						agua = l.value * 0.8;
+						poupa = l.value * 0.2;
+					}
 
-        function acucar(){
-            if(acucar.checked){
-            agua -= agua.value / 100 * 2;
-            }
-        }
-/*
-        function ice(){
-            agua = agua.value - (agua.value / 100 * 5);
-        }
-*/
-        function btFuncao(){
-            s.innerHTML = "Para fazer o suco precisará de " + agua + " L de água e " + poupa + " L de poupa."
-        }
-        
+					if (sabor.id === "g") {
+						agua = l.value * 0.5;
+						poupa = l.value * 0.5;
+					}
+
+					if (complemento.id === "sugar") {
+						agua = agua - (agua*0.02)
+					}
+
+					if (complemento.id === "ice") {
+						agua = agua + (agua*0.05)
+					}
+
+					s.innerHTML = "Para fazer o suco precisará de " + agua + " L de água e " + poupa + " L de poupa."
+				} else {
+					s.innerHTML = "Você não escolheu um tipo de suco."
+				}
+			}
     </script>
+	<p><a href="../index.html">Voltar para a página inicial</a></p>
 </body>
 </html>
