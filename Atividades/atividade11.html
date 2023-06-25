@@ -15,30 +15,36 @@
     <form id="form">
         <fieldset>
             <label>Qual o valor de 9 x 8?</label>
-            <input type="text" name="multi" id="resultado"><br><br>
+            <input type="number" name="multi" id="resultado" required><br><br>
             <label>Valor de 4!:</label>
-            <input type="text" name="fatorial" id="resposta"><br><br>
+            <input type="number" name="fatorial" id="resposta" required><br><br>
             <label>Qual o valor de 14 + 26?</label>
-            <input type="text" name="multi" id="retorno"><br><br>
-        </fieldset>
-        <button id="btenviar">Enviar</button>
+            <input type="number" name="soma" id="retorno" required><br><br>
+        </fieldset><br>
+        <button type="submit" id="btenviar">Enviar</button>
     </form>
     <script>
-       form.onsubmit = function(){
-				m = document.getElementsById('nome')[0];
-				f = document.getElementsById('senha')[0];
-				s = document.getElementsById('sexo');
-	
-				nome.style.backgroundColor = 'lightRed';
-				senha.style.backgroundColor = 'lightRed';
-	
-				let ok = false;
-	
-				if (nome.value.length > 5) {
-					nome.style.backgroundColor = 'white';
-					ok = true;
-				}
+        form.onsubmit = function(){
+            m = document.getElementById('resultado');
+		    f = document.getElementById('resposta');
+		    s = document.getElementById('retorno'); 
+            let conf = true;
+            if (m.value != 72){
+			    m.style.borderColor = 'red';
+                conf = false;
+            }
+
+            if (f.value != 24){
+			    f.style.borderColor = 'red';
+                conf = false;
+            }
+            if (s.value != 40){
+			    s.style.borderColor = 'red';
+                conf = false;
+            }
+            return conf;
+        }
+        
     </script>
-    <p><a href="../index.html">Voltar para a página inicial</a></p>
 </body>
 </html>
